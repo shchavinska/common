@@ -49,7 +49,7 @@ def some_loop_exercise() -> list:
 def remove_from_list_all_negative_numbers(data: List[int]) -> list:
     list1 = []
     for i in data:
-        if i > 0:
+        if i >= 0:
             list1.append(i)
     return list1
 
