@@ -26,9 +26,12 @@ def multiple_ints(first_value: int, second_value: int) -> int:
 
 
 def multiple_ints_with_conversion(first_value: Any, second_value: Any) -> int:
-    first_value = int(first_value)
-    second_value = int(second_value)
-    return first_value * second_value
+    try:
+        first_value = int(first_value)
+        second_value = int(second_value)
+        return first_value * second_value
+    except TypeError:
+        raise ValueError
 
 
 def is_word_in_text(word: str, text: str) -> bool:
