@@ -41,7 +41,7 @@ def is_word_in_text(word: str, text: str) -> bool:
 def some_loop_exercise() -> list:
     list1 = []
     for i in range(13):
-        if i < 6 or i > 7:
+        if i not in [6, 7]:
             list1.append(i)
     return list1
 
