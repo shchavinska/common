@@ -162,7 +162,8 @@ def task_12_list_suppliers_from_specified_countries(cur):
 
     Returns: 8 records
     """
-    cur.execute("SELECT * FROM suppliers WHERE country='USA' AND country='UK' AND country='Japan';")
+    cur.execute("SELECT supplierid, suppliername, contactname, city, country FROM suppliers\
+                 WHERE country IN ('USA', 'UK', 'Japan');")
     return cur.fetchall()
 
 
@@ -175,7 +176,8 @@ def task_13_list_products_from_sweden_suppliers(cur):
 
     Returns: 3 records
     """
-    cur.execute("SELECT productname FROM products INNER JOIN suppliers ON products.supplierid=suppliers.supplierid WHERE country='Sweden';")
+    cur.execute("SELECT productname FROM products INNER JOIN suppliers ON products.supplierid=suppliers.supplierid\
+                 WHERE country='Sweden';")
     return cur.fetchall()
 
 
