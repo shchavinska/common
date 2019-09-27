@@ -61,7 +61,8 @@ def task_4_update_customer(con):
 
     """
     with con.cursor() as cursor:
-        cursor.execute("UPDATE customers SET CustomerName='Johnny Depp' WHERE customerid=1;")
+        cursor.execute("UPDATE customers SET CustomerName='Johnny Depp' WHERE customerid=(SELECT MIN(customerid)\
+                        FROM customers);")
 
 
 def task_5_delete_the_last_customer(con) -> None:
