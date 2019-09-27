@@ -14,10 +14,14 @@ def task_1_fix_names_start_letter(data: DT) -> DT:
         fix_names_start_letters([{'name': 'Alex', 'age': 26}, {'name': 'denys', 'age': 89}])
         >>> [{'name': 'Alex', 'age': 26}, {'name': 'Denys', 'age': 89}]
     """
+<<<<<<< HEAD
     for d in data:
         if 'name' in d:
             d['name'] = d['name'].capitalize()
     return data
+=======
+    pass
+>>>>>>> New Homework for 27.10
 
 
 def task_2_remove_dict_fields(data: DT, redundant_keys: List[str]) -> DT:
@@ -28,6 +32,7 @@ def task_2_remove_dict_fields(data: DT, redundant_keys: List[str]) -> DT:
        remove_dict_field([{'name': 'Alex', 'age': 26}, {'name': 'denys', 'age': 89}], 'age')
         >>> [{'name': 'Alex'}, {'name': 'denys'}]
     """
+<<<<<<< HEAD
     for d in data:
         if isinstance(redundant_keys, list):
             for key in redundant_keys:
@@ -37,6 +42,9 @@ def task_2_remove_dict_fields(data: DT, redundant_keys: List[str]) -> DT:
             if redundant_keys in d:
                 del d[redundant_keys]
     return data
+=======
+    pass
+>>>>>>> New Homework for 27.10
 
 
 def task_3_find_item_via_value(data: DT, value) -> DT:
@@ -151,4 +159,3 @@ def task_10_generator_of_simple_numbers() -> Generator[int, None, None]:
                 break
         if is_simple:
             yield simple_numbers
-
