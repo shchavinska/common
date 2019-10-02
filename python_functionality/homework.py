@@ -58,7 +58,7 @@ def task_4_min_value_integers(data: List[int]) -> int:
     Find and return minimum value from list
     """
     if not data:
-        return
+        return None
     return min(data)
 
 
