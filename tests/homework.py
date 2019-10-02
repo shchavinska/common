@@ -72,8 +72,3 @@ class Rectangle:
         diagonal = self.get_rectangle_diagonal()
         radius = diagonal / 2 * math.sqrt(2)
         return radius
-
-
-rect = Rectangle(4, 4)
-
-rect.get_radius_of_inscribed_circle()
