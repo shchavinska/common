@@ -4,12 +4,6 @@ from homework import Rectangle
 
 class TestRectangle(unittest.TestCase):
 
-    def test_init(self):
-        a = Rectangle(10, 20)
-        self.assertTrue(True)
-        self.assertEqual(a.width, 10)
-        self.assertEqual(a.height, 20)
-
     def test_get_rectangle_perimeter(self):
         self.assertEqual(Rectangle(10, 20).get_rectangle_perimeter(), 60)
 
