@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block vegetables%}
+<ul>
+    {% for element in vegetables %}
+    {% if element == 'beetroot'%}
+    <li>{{element | upper()}}</li>
+    {% else %}
+    <li>{{element}}</li>
+    {% endif %}
+    {% endfor %}
+</ul>
+{% endblock %}
+
+{% block link %}
+<style>
+    .link {margin-left: 1em;}
+</style>
+<div class="link">
+    <div><a href="/">Back to select</a></div>
+</div>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block fruits %}
+<ul>
+    {% for element in fruits %}
+    {% if element == 'strawberry' %}
+    <li style="color:red;">{{element}}</li>
+    {% else %}
+    <li>{{element}}</li>
+    {% endif %}
+    {% endfor %}
+</ul>
+{% endblock %}
+
+{% block link %}
+<style>
+    .link {margin-left: 1em;}
+</style>
+<div class="link">
+    <div><a href="/">Back to select</a></div>
+</div>
+{% endblock %}
