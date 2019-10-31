@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{item.title}}
+{% endblock %}
+
+
+{% block content %}
+    <p>{{item.title}}</p>
+    <img src="static/{{item.title}}.png">
+    <p>{{item.text}}</p>
+    <p>The number of words in string are : {{res}}</p>
+<a href="/">Back</a>
+{% endblock %}
