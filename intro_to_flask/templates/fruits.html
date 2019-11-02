@@ -1,19 +1,17 @@
 {% extends "base.html" %}
 
-{% block fruits %}
+{% block content %}
 <ul>
     {% for element in fruits %}
-    {% if element == 'strawberry' %}
-    <li style="color:red;">{{element}}</li>
-    {% else %}
-    <li>{{element}}</li>
-    {% endif %}
+        {% if element == 'strawberry' %}
+            <li style="color:red;">{{element}}</li>
+        {% else %}
+            <li>{{element}}</li>
+        {% endif %}
     {% endfor %}
 </ul>
-{% endblock %}
-
-{% block link %}
 <div class="link">
-    <div><a href="/">Back to select</a></div>
+    <div><a href="{{ url_for('home') }}">Back to select</a></div>
 </div>
 {% endblock %}
+
