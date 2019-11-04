@@ -10,5 +10,5 @@
     <img src="static/{{item.title}}.png">
     <p>{{item.text}}</p>
     <p>The number of words in string are : {{res}}</p>
-<a href="/">Back</a>
+<a href="{{ url_for('get_home_page') }}">Back</a>
 {% endblock %}
