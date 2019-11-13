@@ -32,7 +32,7 @@ def all_products():
         res = products
 
     for product in res:
-        if session.get(product['id']):
+        if session.get('product' + product['id']):
             product['used'] = "clicked"
 
     return render_template('all_products.html', products=res)
@@ -42,7 +42,7 @@ def all_products():
 def get_product_id(id):
     for product in products:
         if product['id'] == id:
-            session[id] = True
+            session['product' + id] = True
             return render_template('product.html', product=product)
     abort(404)
 

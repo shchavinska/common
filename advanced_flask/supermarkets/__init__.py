@@ -30,7 +30,7 @@ def all_supermarkets():
         res = supermarkets
 
     for supermarket in res:
-        if session.get(supermarket['id']):
+        if session.get('supermarket' + supermarket['id']):
             supermarket['used'] = "clicked"
 
     return render_template('all_supermarkets.html', supermarkets=res)
@@ -40,7 +40,7 @@ def all_supermarkets():
 def get_supermarket_id(id):
     for supermarket in supermarkets:
         if supermarket['id'] == id:
-            session[id] = True
+            session['supermarket' + id] = True
             return render_template('supermarket.html', supermarket=supermarket)
     abort(404)
 
