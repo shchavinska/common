@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div>
+    <ul>
+         <p> Products:</p>
+        {% for product in products %}
+        <li>
+            {% if product.used %}
+                <p>{{ product.name }}</p>
+            {% else %}
+                <a href="{{ url_for('products.get_product_id', id = product.id) }}">{{ product.name }}</a>
+            {% endif %}
+        </li>
+        {% endfor %}
+        <a href="{{ url_for('products.add_product')}}">Add new product</a><br>
+    </ul>
+</div>
+{% endblock %}

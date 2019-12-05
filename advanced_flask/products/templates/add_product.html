@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form method="POST" enctype="multipart/form-data">
+                  Name: <input type="text" name="Name"><br>
+                  Description: <input type="text" name="Description"><br>
+                  Price: <input type="text" name="Price"><br>
+                  Image: <input type="file" name="Image"><br>
+                  <input type="submit" value="Submit"><br>
+              </form>
+{% endblock %}
